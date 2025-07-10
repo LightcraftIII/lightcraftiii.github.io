@@ -1,53 +1,35 @@
-![HTML](https://img.shields.io/badge/HTML-5E5E5E?style=flat\&logo=html5\&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-5E5E5E?style=flat\&logo=css3\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-5E5E5E?style=flat\&logo=javascript\&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-5E5CFF?style=flat-square\&logo=html5\&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-FF66C4?style=flat-square\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-FFD93D?style=flat-square\&logo=javascript\&logoColor=black)
 
-# Retro Desktop Website
+# Retro Desktop Interface
 
-This is a custom-built retro-themed personal website styled like a nostalgic late-'90s to early-2000s desktop interface. It combines pixel-style icons, draggable windows, custom cursors, and CRT effects to deliver a cozy, interactive experience.
+A retro-themed, desktop-inspired personal website designed to evoke the aesthetic of late '90s and early 2000s operating systems.
+
+🕹️ **Live site:** [https://lightcraftiii.github.io/](https://lightcraftiii.github.io/)
 
 ## Features
 
-* 🖼️ Tiled backgrounds, pixel art icons, and glitter aesthetics
-* 🖱️ Custom cursor with hidden system pointer
-* 🪟 Draggable, styled windows with title bars and close buttons
-* 🎵 Built-in retro music player
-* 🎨 Dynamic theme palette selector (Dark, Blue, Green, etc.)
-* 💡 Animated effects including flicker, scanlines, hover glows
+* **Icon-based desktop UI** with interactive app windows
+* **Draggable windows** with bring-to-front behavior
+* **Custom pixel-style cursor** (hardware cursor hidden)
+* **CRT-like scanline overlay and flicker** effects
+* **Dynamic color palette switcher**
+* **Retro music player** styled like a vintage media player
+* **Animated vinyl record for playback feedback**
+* Fully responsive and built with modern HTML/CSS/JS only
 
-## Stack
+## Tech Stack
 
-* **HTML5** for structure
-* **CSS3** for styling (including custom properties)
-* **Vanilla JavaScript** for interactivity and dynamic UI
+* HTML5 & CSS3 (with custom properties)
+* Vanilla JavaScript (no frameworks)
 
-## Setup
+## Future Plans
 
-No build tools required. Clone and open `index.html` in your browser:
-
-```bash
-git clone https://github.com/yourusername/retro-desktop-site.git
-cd retro-desktop-site
-start index.html
-```
-
-## File Structure
-
-```
-retro-desktop-site/
-├── index.html
-├── style.css
-└── script.js
-```
-
-## Browser Compatibility
-
-Designed to work on all modern browsers with proper support for CSS variables and ES6 JavaScript.
-
-## License
-
-MIT License — free to use and modify.
+* Add pixel art gallery window
+* Add journal/blog window with local Markdown rendering
+* Add interactive sticky notes and system tray animations
 
 ---
 
-Crafted with intention for aesthetic authenticity and smooth interaction. No frameworks, no external dependencies — just HTML, CSS, and JavaScript.
+🧾 This project is a creative expression and tribute to old-school web aesthetics. Visit the site and explore the desktop interface!
