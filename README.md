@@ -1,50 +1,53 @@
-# Cozy Retro Desktop Website
+![HTML](https://img.shields.io/badge/HTML-5E5E5E?style=flat\&logo=html5\&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-5E5E5E?style=flat\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-5E5E5E?style=flat\&logo=javascript\&logoColor=white)
 
-This project is a personal website designed to replicate the look and feel of a late 1990s to early 2000s desktop environment. It combines classic desktop UI elements with web technologies to create an interactive, nostalgic user experience.
+# Retro Desktop Website
 
----
+This is a custom-built retro-themed personal website styled like a nostalgic late-'90s to early-2000s desktop interface. It combines pixel-style icons, draggable windows, custom cursors, and CRT effects to deliver a cozy, interactive experience.
 
 ## Features
 
-- **Retro desktop interface** modeled after Windows 95-style desktops.
-- Multiple **color palettes** for customizing the look and feel.
-- Interactive **desktop icons** that open draggable windows.
-- Custom **pixelated mouse cursor** that stays visible above all UI elements.
-- Windows include animated transitions and styled title bars with close buttons.
-- Visual effects such as flickering overlays and CRT scanlines to enhance the vintage feel.
-- Responsive design optimized for modern browsers.
+* 🖼️ Tiled backgrounds, pixel art icons, and glitter aesthetics
+* 🖱️ Custom cursor with hidden system pointer
+* 🪟 Draggable, styled windows with title bars and close buttons
+* 🎵 Built-in retro music player
+* 🎨 Dynamic theme palette selector (Dark, Blue, Green, etc.)
+* 💡 Animated effects including flicker, scanlines, hover glows
 
----
+## Stack
 
-## Usage
+* **HTML5** for structure
+* **CSS3** for styling (including custom properties)
+* **Vanilla JavaScript** for interactivity and dynamic UI
 
-Open the `index.html` file in any modern web browser to launch the desktop interface. Use the palette selector located at the bottom-left corner to switch between color themes. Click icons on the desktop to open corresponding windows, which can be dragged around and closed.
+## Setup
 
----
+No build tools required. Clone and open `index.html` in your browser:
 
-## Customization
+```bash
+git clone https://github.com/yourusername/retro-desktop-site.git
+cd retro-desktop-site
+start index.html
+```
 
-- The color scheme is controlled via CSS variables defined in the `:root` selector.
-- Additional color palettes can be added in the JavaScript `palettes` object.
-- The custom cursor and window styles can be adjusted in the CSS files.
+## File Structure
 
----
+```
+retro-desktop-site/
+├── index.html
+├── style.css
+└── script.js
+```
 
-## Development Details
+## Browser Compatibility
 
-- Uses CSS custom properties and JavaScript to enable dynamic theme switching.
-- The custom cursor is implemented as a fixed-position DOM element with high z-index.
-- Windows and UI elements are styled with CSS transitions for smooth animations.
-- The layout uses a fixed-size desktop container centered on the page.
-
----
-
-## Contributing
-
-Suggestions and improvements are welcome. Please submit issues or pull requests for bug fixes, feature additions, or enhancements.
-
----
+Designed to work on all modern browsers with proper support for CSS variables and ES6 JavaScript.
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License — free to use and modify.
+
+---
+
+Crafted with intention for aesthetic authenticity and smooth interaction. No frameworks, no external dependencies — just HTML, CSS, and JavaScript.
