@@ -1,20 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>wassup</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellcum</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>ts only a placeholder vro</h1>
-  </header>
-  <main>
-    <p>wyd still over here?? gtfo vro</p>
-  </main>
-  <footer>
-    <small>© 2025 LightcraftIII freaky ahh</small>
-  </footer>
+  <div id="desktop">
+    <div id="welcome">Wazzaaaaapp</div>
+    <div id="icons">
+      <div class="icon" data-window="win-projects" title="Projects">
+        <img src="img/folderico.png" alt="Folder Icon" />
+        <span>Projects</span>
+      </div>
+      <div class="icon" data-window="win-music" title="Cassette Player">
+        <img src="img/music.png" alt="Cassette Player Icon" />
+        <span>Music</span>
+      </div>
+      <div class="icon" data-window="win-photos" title="Picture Frame">
+        <img src="img/picture.png" alt="Picture Frame Icon" />
+        <span>Photos</span>
+      </div>
+      <div class="icon" data-window="win-note" title="Hello Note">
+        <img src="img/Postit.png" alt="Sticky Note Icon" />
+        <span>Note</span>
+      </div>
+      <div class="icon" data-window="win-snake" title="Snake">
+        <img src="img/snake.png" alt="Snake Icon" />
+        <span>Snake</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Windows -->
+  <div class="window" id="win-note" style="top: 180px; left: 200px; width: 300px; display: none;">
+    <div class="title-bar">
+      <span class="title">Sticky Note</span>
+      <button class="close-btn" aria-label="Close window">✕</button>
+    </div>
+    <div class="window-content" style="padding: 8px;">
+      <textarea
+        id="sticky-text"
+        placeholder="Write your note here..."
+        style="
+          width: 100%;
+          height: 200px;
+          resize: none;
+          font-family: 'Comic Sans MS', cursive;
+          font-size: 1rem;
+          border: 1px solid #660066;
+          border-radius: 6px;
+          background: #fff0f9;
+          color: #330033;
+          padding: 8px;
+        "
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="window" id="win-projects" style="top: 120px; left: 120px; display: none;">
+    <div class="title-bar">
+      <span class="title">Projects</span>
+      <button class="close-btn" aria-label="Close window">✕</button>
+    </div>
+    <div class="window-content">
+      <p>Project files go here!</p>
+    </div>
+  </div>
+
+  <div class="window" id="win-music" style="top: 150px; left: 150px; display: none; width: 320px;">
+    <div class="title-bar">
+      <span class="title">Cassette Player</span>
+      <button class="close-btn" aria-label="Close window">✕</button>
+    </div>
+    <div class="window-content" style="font-family:'Comic Sans MS', cursive;">
+      <audio id="audio-player" preload="metadata"></audio>
+
+      <div id="controls" style="margin-top: 8px; text-align: center;">
+        <!-- Play Button -->
+        <button id="btn-play" aria-label="Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="8,5 19,12 8,19" />
+          </svg>
+        </button>
+
+        <!-- Pause Button -->
+        <button id="btn-pause" aria-label="Pause">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="5" width="4" height="14" />
+            <rect x="14" y="5" width="4" height="14" />
+          </svg>
+        </button>
+
+        <!-- Stop Button -->
+        <button id="btn-stop" aria-label="Stop">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="12" height="12" />
+          </svg>
+        </button>
+
+        <!-- Previous Track -->
+        <button id="btn-prev" aria-label="Previous Track">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="19,5 10,12 19,19" />
+            <rect x="5" y="5" width="3" height="14" />
+          </svg>
+        </button>
+
+        <!-- Next Track -->
+        <button id="btn-next" aria-label="Next Track">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="5,5 14,12 5,19" />
+            <rect x="16" y="5" width="3" height="14" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="vinyl-container" style="text-align: center; margin-top: 12px;">
+        <img id="vinyl" src="img/vinyl.png" alt="Spinning Vinyl Record" style="width: 120px; height: 120px;" />
+      </div>
+
+      <ul
+        id="playlist"
+        tabindex="0"
+        style="
+          margin-top: 12px;
+          max-height: 160px;
+          overflow-y: auto;
+          padding-left: 0;
+          list-style: none;
+          border: 1px solid #660066;
+          border-radius: 6px;
+          background: #fff0f9;
+        "
+      >
+        <!-- playlist items inserted by JS -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="window" id="win-photos" style="top: 140px; left: 140px; display: none;">
+    <div class="title-bar">
+      <span class="title">Photos</span>
+      <button class="close-btn" aria-label="Close window">✕</button>
+    </div>
+    <div class="window-content">
+      <p>Image files go here!</p>
+    </div>
+  </div>
+
+  <div class="window" id="win-snake" style="top: 160px; left: 100px; width: 300px; display: none;">
+    <div class="title-bar">
+      <span class="title">Snake</span>
+      <button class="close-btn" aria-label="Close window">✕</button>
+    </div>
+    <div class="window-content" style="padding: 8px;">
+      <canvas
+        id="snake-canvas"
+        width="256"
+        height="256"
+        style="border: 2px solid #660066; background: #fff0f9; display: block; margin: auto;"
+      ></canvas>
+      <div style="text-align: center; margin-top: 6px; font-family: 'Comic Sans MS'; color: #660066;">
+        <span>Use arrow keys to play</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- custom cursor -->
+  <img id="custom-cursor" src="img/cursor.png" alt="" />
+
+  <script src="js/scripts.js"></script>
+  <script src="js/palette-switcher.js"></script>
 </body>
 </html>
